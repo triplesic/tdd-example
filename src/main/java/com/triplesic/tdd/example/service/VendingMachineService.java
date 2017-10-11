@@ -16,17 +16,6 @@ public class VendingMachineService {
 	
 	public Map<String, Object> buyProduct(String string, long l) {
 
-		Map<String, Object> expected = new HashMap<>();
-
-		expected.put("product", null);
-		expected.put("exchange", Arrays.asList(15L));
-		expected.put("message", "Sorry! no product");
-
-		return expected;
-	}
-	
-	public Map<String, Object> buyProduct2(String string, long l) {
-
 		boolean hasProduct = hasProduct(string);
 		
 		Map<String, Object> expected = new HashMap<>();

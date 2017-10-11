@@ -30,7 +30,7 @@ public class VendingMachineServiceTest {
 
 		Mockito.doReturn(false).when(productRepo).hasProduct("Coke");
 
-		Map<String, Object> result = vendingMachineService.buyProduct2("Coke", 12L);
+		Map<String, Object> result = vendingMachineService.buyProduct("Coke", 12L);
 		Map<String, Object> expected = new HashMap<>();
 
 		expected.put("product", null);
@@ -45,7 +45,7 @@ public class VendingMachineServiceTest {
 
 		Mockito.doReturn(true).when(productRepo).hasProduct("Coke");
 
-		Map<String, Object> result = vendingMachineService.buyProduct2("Coke", 12L);
+		Map<String, Object> result = vendingMachineService.buyProduct("Coke", 12L);
 		Map<String, Object> expected = new HashMap<>();
 
 		expected.put("product", "Coke");
