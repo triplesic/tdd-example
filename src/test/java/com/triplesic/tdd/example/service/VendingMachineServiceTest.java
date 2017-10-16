@@ -13,7 +13,7 @@ import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.triplesic.tdd.example.repo.ProductRepo;
+import com.triplesic.tdd.example.repo.ProductRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -23,12 +23,12 @@ public class VendingMachineServiceTest {
 	VendingMachineService vendingMachineService;
 
 	@Mock
-	ProductRepo productRepo;
+	ProductRepository legacyProductRepo;
 
 	@Test
 	public void shouldReturnMessageNoProductAndExchangeAllMoneyWhenNoItemInVendingMachine() {
 
-		Mockito.doReturn(false).when(productRepo).hasProduct("Coke");
+		Mockito.doReturn(false).when(legacyProductRepo).hasProduct("Coke");
 
 		Map<String, Object> result = vendingMachineService.buyProduct("Coke", 12L);
 		Map<String, Object> expected = new HashMap<>();
@@ -43,7 +43,7 @@ public class VendingMachineServiceTest {
 	@Test
 	public void shouldReturnCokeAndThankyouMsgWhenSelectCodeAndInsertEnoughMoney() {
 
-		Mockito.doReturn(true).when(productRepo).hasProduct("Coke");
+		Mockito.doReturn(true).when(legacyProductRepo).hasProduct("Coke");
 
 		Map<String, Object> result = vendingMachineService.buyProduct("Coke", 12L);
 		Map<String, Object> expected = new HashMap<>();

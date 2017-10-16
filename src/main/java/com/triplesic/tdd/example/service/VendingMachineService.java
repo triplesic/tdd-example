@@ -4,27 +4,26 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.triplesic.tdd.example.repo.ProductRepo;
+import com.triplesic.tdd.example.repo.ProductRepository;
 
 @Service
 public class VendingMachineService {
 
-	ProductRepo productRepo = new ProductRepo();
+	ProductRepository legacyProductRepo = new ProductRepository();
 	
 	public Map<String, Object> buyProduct(String string, long l) {
 
 		boolean hasProduct = hasProduct(string);
-		
+
 		Map<String, Object> expected = new HashMap<>();
-		
-		if(hasProduct){
+
+		if (hasProduct) {
 			expected.put("product", string);
 			expected.put("exchange", null);
 			expected.put("message", "Thank you!");
-		}else{
+		} else {
 			expected.put("product", null);
 			expected.put("exchange", Arrays.asList(15L));
 			expected.put("message", "Sorry! no product");
@@ -33,7 +32,7 @@ public class VendingMachineService {
 		return expected;
 	}
 
-	private boolean hasProduct(String product){
-		return productRepo.hasProduct(product);
+	private boolean hasProduct(String product) {
+		return legacyProductRepo.hasProduct(product);
 	}
 }
