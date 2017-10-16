@@ -1,4 +1,4 @@
-package com.triplesic.tdd.example.model;
+package com.training.tdd.example.model;
 
 public class Product {
 

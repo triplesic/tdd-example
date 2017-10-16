@@ -1,9 +1,9 @@
-package com.triplesic.tdd.example.repo;
-
-import com.triplesic.tdd.example.model.Product;
+package com.training.tdd.example.repo;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.training.tdd.example.model.Product;
 
 public class ProductRepository implements IProductRepository // comment or
 																// uncomment

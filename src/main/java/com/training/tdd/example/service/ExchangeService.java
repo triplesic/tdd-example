@@ -1,4 +1,4 @@
-package com.triplesic.tdd.example.service;
+package com.training.tdd.example.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;

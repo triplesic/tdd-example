@@ -1,4 +1,4 @@
-package com.triplesic.tdd.example.service;
+package com.training.tdd.example.service;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.training.tdd.example.service.ExchangeService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

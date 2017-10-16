@@ -1,4 +1,4 @@
-package com.triplesic.tdd.example.service;
+package com.training.tdd.example.service;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,7 +13,8 @@ import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.triplesic.tdd.example.repo.ProductRepository;
+import com.training.tdd.example.repo.ProductRepository;
+import com.training.tdd.example.service.VendingMachineService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

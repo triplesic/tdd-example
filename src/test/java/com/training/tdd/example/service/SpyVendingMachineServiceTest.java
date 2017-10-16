@@ -1,6 +1,5 @@
-package com.triplesic.tdd.example.service;
+package com.training.tdd.example.service;
 
-import com.triplesic.tdd.example.repo.ProductRepository;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +7,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Spy;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.training.tdd.example.repo.ProductRepository;
+import com.training.tdd.example.service.VendingMachineService;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.triplesic.tdd.example.service;
+package com.training.tdd.example.service;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.triplesic.tdd.example.repo.ProductRepository;
+import com.training.tdd.example.repo.ProductRepository;
 
 @Service
 public class VendingMachineService {

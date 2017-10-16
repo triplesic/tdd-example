@@ -1,4 +1,4 @@
-package com.triplesic.tdd.example.api;
+package com.training.tdd.example.api;
 
 import javax.validation.Valid;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.triplesic.tdd.example.service.ExchangeService;
+import com.training.tdd.example.service.ExchangeService;
 
 @RestController
 @RequestMapping("/api/exchange")
